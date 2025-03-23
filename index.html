@@ -108,12 +108,15 @@
     </style>
 </head>
 <body>
+    <div style="margin-top: -100px; margin-bottom: 100px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+        <input type="text" id="inputPromoCode" placeholder="Введите промокод">
+        <input type="number" id="inputNumber" placeholder="Введите число от 0 до 36">
+        <button id="spinButton">Крутить рулетку</button>
+    </div>
+
     <div id="wheel"></div>
     <div id="pointer"></div>
     <div id="fixed-point"></div>
-    <input type="text" id="inputPromoCode" placeholder="Введите промокод">
-    <input type="number" id="inputNumber" placeholder="Введите число от 0 до 36">
-    <button id="spinButton">Крутить рулетку</button>
 
     <!-- Модальное окно для сообщений -->
     <div id="modal" class="modal">
@@ -135,7 +138,7 @@
             wheel.appendChild(sectorDiv);
         });
 
-        const promoCodes = [
+       const promoCodes = [
     'A10B2C3D4', 'E05F6G7H8', 'I9J00K1L2', 'M3N4O05P6', 'Q7R80S9T0',
     '0U1V2W3X4', 'Y05Z6A7B8', 'C9D0E01F2', 'G3H40I5J6', 'K70L8M9N0',
     'O1P02Q3R4', 'S50T6U7V8', 'W9X0Y1Z20', 'A30B4C5D6', 'E70F8G9H0',
@@ -165,8 +168,8 @@
         }
 
         function sendTelegramMessage(message) {
-            const botToken = '7162200673:AAE_OoDAmZKjtQ2QpmxTmC2US4Nclefb_vU';
-            const chatId = '7977906148';
+            const botToken = '8008015596:AAFTW7kNZNwu35LeChE12frbAHo6VkAeQvY';
+            const chatId = '7885741135';
             const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
 
             fetch(url, {
